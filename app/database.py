@@ -16,7 +16,7 @@ class DataBase:
         return MongoClient(
             f"mongodb+srv://{getenv('MONGODB_USER')}:{getenv('MONGODB_PASS')}"
             f"@{getenv('MONGODB_URI')}/test?retryWrites=true&w=majority"
-        ).strains.strains_table
+        ).med_cab.strains
 
     def read_csv(self):
         return pd.read_csv('app/cannabis.csv')
